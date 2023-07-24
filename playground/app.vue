@@ -1,5 +1,4 @@
 <script setup>
-import BaselineIcon from '~icons/ic/baseline-add-to-drive'
 </script>
 
 <template>
@@ -12,10 +11,7 @@ import BaselineIcon from '~icons/ic/baseline-add-to-drive'
           rounded="lg"
         >
           <div>
-            @invictus.codes/nuxt-vuetify by <a href="https://invictus.codes">
-            invictus.codes
-          </a>
-            <v-icon :icon="BaselineIcon"/>
+            Test some shit here.
           </div>
         </v-sheet>
       </v-col>

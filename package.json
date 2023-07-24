@@ -67,8 +67,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.7",
+    "@iconify/json": "^2.2.93",
     "@mdi/font": "^7.2.96",
-    "@nuxt/module-builder": "0.4.0",
+    "@nuxt/module-builder": "^0.4.0",
     "@nuxt/schema": "^3.6.2",
     "@nuxt/test-utils": "^3.6.2",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
@@ -78,8 +79,6 @@
     "nuxt": "^3.6.2",
     "sass": "^1.63.6",
     "typescript": "^5.1.6",
-    "vitest": "^0.33.0",
-    "@iconify/json": "^2.2.93",
-    "unplugin-icons": "^0.16.5"
+    "vitest": "^0.33.0"
   }
 }

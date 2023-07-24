@@ -1,6 +1,6 @@
 
 export default defineNuxtConfig({
-  modules: ['../src/module', 'unplugin-icons/nuxt'],
+  modules: ['../src/module'],
   app: {
     baseURL: process.env.BASE_URL || '/',
   },
