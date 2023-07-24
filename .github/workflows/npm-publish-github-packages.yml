@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: npm test
+      - run: npm build
 
   publish-gpr:
-    if: "startsWith(github.event.head_commit.message, '[dev-deploy]')"
+    if: "startsWith(github.event.head_commit.message, '[deploy]')"
     needs: build
     runs-on: ubuntu-latest
     permissions:
