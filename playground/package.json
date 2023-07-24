@@ -1,8 +1,4 @@
 {
   "private": true,
   "name": "@invictus.codes/nuxt-vuetify-playground",
-  "devDependencies": {
-    "@iconify/json": "^2.2.93",
-    "unplugin-icons": "^0.16.5"
-  }
 }
