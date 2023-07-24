@@ -1,5 +1,5 @@
 {
-  "moduleResolution":"node",
+  "extends": "./playground/.nuxt/tsconfig.json",
   "compilerOptions": {
     "esModuleInterop": true
   }
