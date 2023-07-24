@@ -26,7 +26,7 @@ jobs:
       - run: npm run prepack
       - run: npm run dev:generate
       - run: rm -rf ./dist/runtime
-      - run: cp ./src/runtime ./dist/runtime
+      - run: cp -r ./src/runtime ./dist/runtime
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
