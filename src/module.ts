@@ -34,7 +34,6 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     moduleOptions: {
       // Nuxt-Vuetify module
-      useIconCDN: true,
       treeshaking: false,
       useVuetifyLabs: false,
       // Vite-plugin-vuetify
@@ -62,7 +61,6 @@ export default defineNuxtModule<ModuleOptions>({
     const {
       styles,
       autoImport,
-      useIconCDN,
       treeshaking,
       useVuetifyLabs
     } = moduleOptions
@@ -97,20 +95,6 @@ export default defineNuxtModule<ModuleOptions>({
       if (styles?.configFile && typeof styles.configFile === 'string') {
         nuxt.options.css.unshift(styles.configFile)
       }
-    }
-
-    // Icon CDN's
-    if (useIconCDN) {
-      const iconCDNs = new Map()
-      iconCDNs.set('fa', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css')
-      iconCDNs.set('mdi', 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css')
-      iconCDNs.set('md', 'https://fonts.googleapis.com/css?family=Material+Icons')
-      nuxt.options.app.head.link ||= []
-      nuxt.options.app.head.link.push({
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: iconCDNs.get(vuetifyOptions.icons?.defaultSet || 'mdi'),
-      })
     }
 
     // Module: use vite-plugin-vuetify for treeshaking and includes autoImport and styles

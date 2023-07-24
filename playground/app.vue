@@ -1,3 +1,7 @@
+<script setup>
+import BaselineIcon from '~icons/ic/baseline-add-to-drive'
+</script>
+
 <template>
   <v-container>
     <v-row>
@@ -8,16 +12,11 @@
           rounded="lg"
         >
           <div>
-            <v-icon
-              color="orange"
-              icon="mdi-fire"
-            />
             @invictus.codes/nuxt-vuetify by <a href="https://invictus.codes">
             invictus.codes
-            &nbsp;<v-icon icon="mdi-home" size="12" />
           </a>
+            <v-icon :icon="BaselineIcon"/>
           </div>
-          <div><v-date-picker /></div>
         </v-sheet>
       </v-col>
     </v-row>
