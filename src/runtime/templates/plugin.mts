@@ -13,11 +13,10 @@ import * as directives from 'vuetify/directives'
 options.components = components
 options.directives = directives
 
-'<% if (options.useVuetifyLabs) { %>'
-import * as labs from 'vuetify/labs/components'
-
-options.components = {...options.components, ...labs}
-'<% } %>'
+  '<% if (options.useVuetifyLabs) { %>'
+    import * as labs from 'vuetify/labs/components'
+    options.components = {...options.components, ...labs}
+  '<% } %>'
 '<% } %>'
 
 export default defineNuxtPlugin(nuxtApp => {
