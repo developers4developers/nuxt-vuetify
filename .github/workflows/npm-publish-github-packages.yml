@@ -25,8 +25,8 @@ jobs:
       - run: npm run dev:prepare
       - run: npm run prepack
       - run: npm run dev:generate
-      - run: rm -rf ./dist/runtime
-      - run: cp -r ./src/runtime ./dist
+      - run: rm -rf ${{ github.workspace }}/dist/runtime
+      - run: cp -r ${{ github.workspace }}/src/runtime ${{ github.workspace }}/dist
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
