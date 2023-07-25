@@ -25,6 +25,17 @@ jobs:
       - run: npm run dev:prepare
       - run: npm run prepack
       - run: npm run dev:generate
+      - run: |
+          ls -a
+      - run: rm -rf ./dist/runtime
+      - run: |
+          ls ./dist
+      - run: cp -r ./src/runtime ./dist
+      - run: |
+          ls -a
+      - uses: actions/upload-artifact@v3
+        with:
+          path: dist
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
